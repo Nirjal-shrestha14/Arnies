@@ -1,0 +1,734 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Message */
+
+/* #message-container {
+  position: fixed;
+  top: 20px;
+  left: 600px;
+  z-index: 1000;
+  background: white;
+  box-shadow: #333;
+}
+#message-container h3 {
+  cursor: default;
+  display: flex;
+  align-items: center;
+}
+#message-container h3 button {
+  margin-left: 1rem;
+} */
+
+
+/* #message-container .error {
+  color: #870000;
+}
+#message-container .success {
+  color: #7ea919;
+} */
+
+/* @media (max-width: 768px) {
+  .products-container-unique {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+} */
+#message-container {
+  position: fixed; /* Fixed position to stay in view */
+  top: 5%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  border: 1px solid #333; /* Darker border for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Increased padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow for depth */
+  z-index: 1000; /* Ensure it's above other content */
+  width: 400px; /* Fixed width for the container */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Position relative for absolute positioning of close button */
+}
+
+#message-container h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text for emphasis */
+  flex: 1; /* Allow the message to take up available space */
+}
+
+#message-close-btn {
+  position: absolute; /* Absolute positioning */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  background: none; /* Remove default button background */
+  border: none; /* Remove default border */
+  color: #fff; /* White color for the button text */
+  font-size: 20px; /* Larger font size for the button */
+  cursor: pointer; /* Pointer cursor to indicate clickable */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#message-close-btn:hover {
+  color: #ccc; /* Light gray on hover for contrast */
+}
+
+#message-close-btn:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+
+/* Navbar css */
+
+.navbar-unique {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #ddd; /* Optional: add a subtle border for separation */
+}
+
+.nav-links-unique a {
+  color: #333; /* Adjust text color for better contrast on white background */
+}
+.navbar-unique .logo-unique a img {
+  height: 50px;
+}
+
+.nav-links-unique {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links-unique li {
+  margin: 0 15px;
+}
+
+.nav-links-unique a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Profile Dropdown */
+
+.profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.profile-dropdown .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.profile-dropdown .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Display Image index */
+
+.image-container {
+  position: relative;
+  max-width: 100%;
+  height: calc(100vh - 85px);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlay1 h1 {
+  margin: 0;
+  font-size: 4rem; /* Adjust font size as needed */
+  font-weight: bold;
+  text-align: left;
+}
+
+.overlay1 .button1 {
+  display: inline-block;
+  font-size: larger;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(7, 7, 7);
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay1 .button1:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/*Featured products css */
+
+.featured-products-unique {
+  padding: 20px;
+  text-align: center;
+}
+
+.featured-header-unique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.featured-header-unique h2 {
+  margin-right: 20px;
+  font-size: 30px;
+  color: #333;
+
+}
+
+.featured-header-unique h3 {
+  margin-right: 20px;
+  font-size: 30px;
+  color: #333;
+  text-align: left;
+  
+}
+.view-all-unique {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.view-all-unique:hover {
+  background-color: #555;
+}
+
+.product-placeholder-unique:nth-child(3n) {
+  margin-right: 0; /* Remove right margin for every third item */
+}
+
+.products-container-unique {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Brand logo section css */
+
+.brand-logos-unique {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.brand-logos-unique h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+
+  width: 150px; /* Adjust size of logos as needed */
+  margin: 0 30px; /* Adjust spacing between logos */
+}
+
+/* Shipping Info*/
+
+.shipping-info-unique {
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+}
+
+.shipping-info-unique .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shipping-info-unique h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.shipping-info-unique .info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.shipping-info-unique .info p {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Footer css */
+
+.footer {
+  background-color: #fff;
+  color: #333;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Registration Page */
+
+.registration-unique {
+  padding: 40px;
+  text-align: center;
+}
+
+.registration-unique h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.registration-form-unique {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form-unique label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.registration-form-unique input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.registration-form-unique button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.registration-form-unique button:hover {
+  background-color: #555;
+}
+
+.registration-form-unique {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.registration-form-unique label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.registration-form-unique input,
+.registration-form-unique select {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.registration-form-unique button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.registration-form-unique button:hover {
+  background-color: #555;
+}
+
+/* Login Page */
+
+.login-unique {
+  padding: 40px;
+  text-align: center;
+}
+
+.login-unique h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-form-unique {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-unique label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.login-form-unique input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form-unique button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form-unique button:hover {
+  background-color: #555;
+}
+
+.nav-links-unique {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links-unique li {
+  position: relative;
+}
+
+.nav-links-unique a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.nav-links-unique a:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Shop Page*/
+
+.shop-products-unique {
+  padding: 20px;
+  text-align: center;
+}
+
+.shop-products-unique h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.products-grid-unique {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cart Page */
+
+.cart-section-unique {
+  padding: 20px;
+  text-align: center;
+}
+
+.cart-section-unique h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.cart-table-unique {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.cart-table-unique th,
+.cart-table-unique td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-table-unique th {
+  background-color: #f4f4f4;
+}
+
+.quantity-input-unique {
+  width: 50px;
+  text-align: center;
+}
+
+.cart-total-unique {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.checkout-button-unique {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-button-unique a {
+  color: white;
+  text-decoration: none;
+}
+
+.checkout-button-unique:hover {
+  background-color: #555;
+}
+.container {
+  text-align: center; /* Center text for the container */
+}
+.container {
+  text-align: center; /* Center align text */
+  margin-top: 40px; /* Add space from the top */
+}
+
+
+/* Categories */
+
+.container h2 {
+  font-size: 30px;
+  font-weight: bold; 
+  color: #333; 
+  margin-bottom: 30px; 
+
+}
+
+/* Styles for the manual slideshow section within the container */
+.manual-slideshow {
+  position: relative;
+  max-width: 100%;
+  height: 500px; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.manual-slideshow {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area */
+}
+
+/* Ensure only the first slide is visible by default */
+
+.slide.active-slide {
+  display: block; /* Display the first slide */
+}
+
+
+.overlay {
+  position: absolute;
+  margin-left: 80px; /* Adjust left position */
+  top: 80px; /* Position overlay at the bottom */
+  left: 20px; /* Adjust left position */
+  color: #fff; /* White text color */
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners for the overlay */
+}
+
+.overlay h1 {
+
+  margin: 0; /* Remove default margin */
+  font-size: 55px; /* Adjust font size */
+}
+
+.overlay .button {
+  display: inline-block;
+  margin-top: 25px; 
+  padding: 10px 20px;
+  background-color: white; /* Button background color */
+  color: black; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners for button */
+  font-size: 16px; /* Button font size */
+  margin-top: 10px; /* Space above button */
+}
+
+.overlay .button:hover {
+  background-color: white; /* Darker green on hover */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px; /* Adjust font size for navigation arrows */
+  z-index: 10; /* Ensure buttons are above the slides */
+}
+
+.prev {
+  left: 10px; /* Position the previous button on the left */
+}
+
+.next {
+  right: 10px; /* Position the next button on the right */
+}
+
+/* Add to Cart Button */
+
+.add-to-cart-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+.add-to-cart-btn:active {
+    background-color: #1e7e34; /* Even darker green on active click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow */
+    transform: translateY(2px); /* Slightly move down on click */
+}

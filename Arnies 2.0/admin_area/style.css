@@ -1,0 +1,62 @@
+
+/* Page Content Styling */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Table Styling */
+.order-details-table {
+    width: 60%;
+    margin-left: 200px;
+
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.order-details-table th, .order-details-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.order-details-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.order-details-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.order-details-table tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.order-details-table tbody tr:hover td {
+    background-color: #f1f1f1;
+}
+
+.order-details-table thead {
+    background-color: #333;
+}

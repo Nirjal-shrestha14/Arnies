@@ -1,0 +1,107 @@
+/* Add these styles to your existing CSS file */
+
+/* General Styling for Order Confirmation Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover td {
+    background-color: #f1f1f1;
+}
+
+thead {
+    background-color: #333;
+}
+
+/* Styling for the Header */
+.navbar-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   
+}
+
+.logo-unique img {
+    height: 40px;
+}
+
+.nav-links-unique {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links-unique li {
+    margin-left: 20px;
+}
+
+.nav-links-unique a {
+    text-decoration: none;
+    color: blackX;
+    font-size: 18px;
+}
+
+.nav-links-unique a:hover {
+    color: #ddd;
+}
